@@ -20,10 +20,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
-            - run: sed -i 's/network_info_plus: .*/network_info_plus: ^6.0.0/' pubspec.yaml
+      - run: sed -i 's/network_info_plus: .*/network_info_plus: ^6.0.0/' pubspec.yaml
         working-directory: app
       - run: flutter pub get
-        working-directory: app
         working-directory: app
       - run: flutter build apk --release
         working-directory: app
